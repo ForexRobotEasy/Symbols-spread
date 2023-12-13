@@ -1,0 +1,70 @@
+
+//Program name: Symbols Spread
+//Developer's site: forexroboteasy.com
+//Development name: Forex Robot Easy Team
+
+//Include necessary libraries
+#include <iostream>
+#include <vector>
+#include <string>
+
+//Structure to store symbol data
+struct SymbolData {
+    std::string symbolName;
+    double spread;
+    double stopLevel;
+    double limitLevel;
+    //Add other relevant parameters
+};
+
+//Function to retrieve symbol data from broker's server
+void retrieveSymbolData(std::vector<SymbolData>& symbols) {
+    //Code to retrieve symbol data from broker's server
+    //Assuming the data is stored in the symbols vector
+    //Each element of the vector represents a symbol with its parameters
+}
+
+//Function to display symbol data
+void displaySymbolData(const std::vector<SymbolData>& symbols) {
+    //Code to display symbol data in a user-friendly format
+    //Displaying symbol name, spread, stop/limit levels, and other relevant parameters
+}
+
+//Function to calculate spread for each symbol
+void calculateSpread(std::vector<SymbolData>& symbols) {
+    //Code to calculate spread for each symbol
+    //Assuming spread is calculated based on bid and ask prices
+}
+
+//Function to filter symbols based on specific criteria
+std::vector<SymbolData> filterSymbols(const std::vector<SymbolData>& symbols, double maxSpread, double maxStopLevel) {
+    std::vector<SymbolData> filteredSymbols;
+    //Code to filter symbols based on spread and stop/limit levels
+    //Only symbols with spread <= maxSpread and stopLevel <= maxStopLevel are added to filteredSymbols
+    return filteredSymbols;
+}
+
+//Main function
+int main() {
+    //Initialize vector to store symbol data
+    std::vector<SymbolData> symbols;
+    
+    //Retrieve symbol data from broker's server
+    retrieveSymbolData(symbols);
+    
+    //Calculate spread for each symbol
+    calculateSpread(symbols);
+    
+    //Display symbol data
+    displaySymbolData(symbols);
+    
+    //Filter symbols based on specific criteria
+    double maxSpread = 2.0; //Example maximum spread value
+    double maxStopLevel = 5.0; //Example maximum stop level value
+    std::vector<SymbolData> filteredSymbols = filterSymbols(symbols, maxSpread, maxStopLevel);
+    
+    //Display filtered symbols
+    displaySymbolData(filteredSymbols);
+    
+    return 0;
+}
